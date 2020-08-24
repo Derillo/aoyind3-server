@@ -28,10 +28,11 @@ Server.ini
 Por defecto tiene configurado el puerto 7222, si se cambia ese puerto es necesario cambiarlo tambien en el código del cliente.
 
 
-Es necesario tener instalado MySQL Server, recomendablemente la version 5.7, y deben crear una base de datos e importarle el contenido del archivo aoyind3.sql.
-Luego en Server.ini deberan configurar los datos de conexión a la base de datos.
+Es necesario tener instalado [MySQL Server](https://dev.mysql.com/downloads/installer/), recomendablemente la version 5.7, y deben crear una base de datos e importarle el contenido del archivo aoyind3.sql. Para manipular la base de datos, pueden utilizar el Paquete de MySql server **Workbech**. La base de datos se conecta por medio del puerto 3306.
+Luego en Server.ini deberan configurar los datos de conexión a la base de datos. 
 
-Actualmente no hay un repo con una web para poder crear las cuentas de usuario, asi que en esta version deberan crear una cuenta a mano en la tabla de cuentas, la password deberá ir en MD5, y así podran ingresar desde el cliente y crear personajes. 
+Actualmente no hay un repo con una web para poder crear las cuentas de usuario, asi que en esta version deberan crear una a mano en la tabla de cuentas. 
+La passwd esta codificada con MD5, pueden usar un conversor online y colocarla en el campo passwd de la base de datos. También se puede ejecutar la query `UPDATE account SET password = md5(‘asdasd’) where id=1;`(siendo asdasd la passwd a que queremos usar). Así podrán ingresar desde el cliente y crear personajes.
 
 ## F.A.Q:
 
